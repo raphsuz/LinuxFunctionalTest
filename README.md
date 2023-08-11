@@ -1,4 +1,4 @@
-# LinuxKernelFunctionalTest
+# Linux Kernel Functional Test
 Some specific fnction test for Linux system
 
 ## Contents description:
