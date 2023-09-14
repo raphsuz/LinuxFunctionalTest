@@ -24,7 +24,7 @@ int main() {
     start = clock();
     for (i = 0; i < ITERATIONS; i++) {
         if (i % 4 == 0) {
-            y++;  // Increment y or modify it as needed
+            y = rand() % 65536;  // Assign a random value between 0 and 65535 to y
         }
         LOCATION = (y + ((i * NUM_A) / (NUM_B * NUM_CAND)) + NUM_N) %  NUM_A / NUM_B);
     }
@@ -38,7 +38,7 @@ int main() {
     start = clock();
     for (i = 0; i < ITERATIONS; i++) {
         if (i % 4 == 0) {
-            y++;  // Increment y or modify it as needed
+            y = rand() % 65536;  // Assign a random value between 0 and 65535 to y
         }
         LOCATION = (y + (i * NUM_A) / precomputedDivisor + NUM_N) % precomputedModulus;
     }
@@ -53,7 +53,7 @@ int main() {
     start = clock();
     for (i = 0; i < ITERATIONS; i++) {
         if (i % 4 == 0) {
-            y++;  // Increment y or modify it as needed
+            y = rand() % 65536;  // Assign a random value between 0 and 65535 to y
         }
         LOCATION = (y + (i * NUM_A) / precomputedDivisor + NUM_N) &  NUM_A >> shiftValue);
     }
