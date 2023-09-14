@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 #define ITERATIONS 10000000
 int NUM_A = 128;
@@ -8,7 +9,10 @@ int NUM_CAND = 4;
 int NUM_N = 10;
 
 int main() {
-    int i, y = 11223;  // Example starting value
+    // Seed the random number generator
+    srand(time(NULL));
+
+    int i, y = rand() % 65536;  // Initialize y with random value 
     int LOCATION;
 
     int precomputedDivisor = NUM_B * NUM_CAND;
